@@ -49,7 +49,7 @@ Teljesítményméréshez a [BenchmarkDotNet](https://github.com/PerfDotNet/Bench
 
 ### Projektek
 Ahhoz, hogy használjuk, készítünk két projektet egy solution-ban, az egyik fogja az algoritmusokat tartalmazni (BitmapToImageSource). Mivel csak az algoritmusokat mérjük, ezért egy sima konzol alkalmazás meg fog felelni. A másik projekt szintén egyszerű konzol alkalmazás a teljesítménytesztekhez (BitmapToImageSource.Benchmarks). Ahhoz, hogy a teszteket futtassuk, a második projektet jelöljük ki alapértelmezetté (Jobb egérgomb, és *Set as StartUp* project menüpont).
-![](images/step1.png)
+![](images/step1.png?raw=true)
 
 ### BenchmarkDotNet nuget telepítése
 
@@ -58,20 +58,20 @@ A .Benchmarks projektbe telepítsük a [BenchmarkDotNet nuget](https://www.nuget
 #### Telepítés Nuget Package Manager segítségével
 Betöltjük a Nuget package manager ablakot (jobb egérgomb a *Solution* soron a *Soution explorer* ablakban, majd *Manage Nuget Packages for Solution...* menüpont, vagy *Tools\Nuget Package Manager\Manage Nuget Packages for Solution...* menüpont) és a következő módon járunk el:
 
-![](images/step2.png)
+![](images/step2.png?raw=true)
  1. Az ablakban kiválasztjuk a *Browse* menüpontot,
-![](images/step3.png)
+![](images/step3.png?raw=true)
  1. A keresőmezőbe beírjuk a könyvtár nevét (benchmarkdotnet),
-![](images/step4.png)
+![](images/step4.png?raw=true)
  1. Kiválasztjuk az első csomagot, ekkor megjelennek a jobb oldali ablakban a projektek, ahova telepíthetjük,
-![](images/step5.png)
+![](images/step5.png?raw=true)
  1. Kiválasztjuk a benchmark projektünket, ahva telepíteni szerenénk, majd
-![](images/step6.png)
+![](images/step6.png?raw=true)
  1. Install gombra kattintunk.
 
 #### Telepítés Package Manager Console segítségével
 A Package Manager Console ablakot vagy a *View\Other Windows\Package Manager Console* menüpont segítségével, vagy a *Tools\Nuget Package Manager\Package Manager Console* menüpont segítségével érjük el. Fontos, hogy a Default projekt lenyílóban a benchmark projektünk legyen kiválasztva:
-![](images/step7.png)
+![](images/step7.png?raw=true)
 
 Itt aztán telepítjük a következő sorral a csomagot:
 
@@ -96,15 +96,15 @@ PM>
 ```
 
 A nuget telepítésének eredményeképpen megjelent a referenciák között a BenchmarkDotNet assembly:
-![](images/step8.png)
+![](images/step8.png?raw=true)
 
 ### Tesztek
 Most, hogy ezzel megvagyunk, készítünk egy osztályt, ami a teljesítményteszteket futtatja. Ehhez szükségünk lesz a **Bitmap** osztálytípusra, ezért a referenciák közé vegyük fel a System.Drawing assembly-t (jobb egérgomb a *References* soron, majd *Add reference...* menüpont):
-![](images/step9.png)
+![](images/step9.png?raw=true)
 
 Itt megkeressük és bepipáljuk a System.Drawing assemblít és OK-t nyomunk, ezzel felvettük a megfelelő referenciát:
 
-![](images/step10.png)
+![](images/step10.png?raw=true)
 
 Szóval van Bitmap típusunk, ezért képesek vagyunk a következő tesztelésre:
 

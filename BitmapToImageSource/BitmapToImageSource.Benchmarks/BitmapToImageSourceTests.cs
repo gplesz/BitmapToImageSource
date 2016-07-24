@@ -1,5 +1,7 @@
 ﻿using BenchmarkDotNet.Attributes;
+using BitmapToImageSource;
 using System.Drawing;
+using System.Windows.Media.Imaging;
 
 namespace BitmapToImageSource.Benchmarks
 {
@@ -14,9 +16,15 @@ namespace BitmapToImageSource.Benchmarks
         }
 
         [Benchmark]
-        public void TestBitmapToImageSource1()
+        public BitmapImage TestBitmapToImageSource1()
         {
+            return bitmap.ToBitmapImage();
+        }
 
+        [Benchmark]
+        public BitmapImage TestBitmapToImageSource2()
+        {
+            return bitmap.ToBitmapImage2();
         }
     }
 }
